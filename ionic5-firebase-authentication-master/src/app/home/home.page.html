@@ -1,0 +1,64 @@
+<ion-header>
+  <div class="test">
+  <ion-toolbar class="ion-text-left">
+    <ion-title class="test">EduLearn</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    </ion-toolbar>
+  </div>
+</ion-header>
+
+<ion-content>
+
+<ion-card>
+<ion-slides #sliders (ionSlidesDidLoad)='slidesDidLoad(sliders)'pager='true' [option]='slidesOpts'>
+  <ion-slide>
+     <ion-img src="assets\wish.jpg"></ion-img>
+    </ion-slide>
+
+  <ion-slide>
+      <ion-img src="assets\icon\staysafe.JPG"></ion-img>
+  </ion-slide>
+  </ion-slides>
+
+</ion-card>
+
+  <ion-title class="test">Tips SPM</ion-title>
+  <ion-card>
+  <ion-item [routerLink]="['/tips']">
+  <img src="assets\spm.jpg" alt="">
+</ion-item>
+</ion-card>
+
+<ion-title class="test">Nota Ringkas SPM</ion-title>
+  <!-- ion slide -->
+  <ion-slides [option]="option" class="ion-margin-top">
+
+    <ion-slide>
+      <ion-card>
+      <ion-item [routerLink]="['/bio']">
+         <img src="assets/bio.jpg"/>
+    </ion-item>
+  </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+      <ion-item [routerLink]="['/kimia']">
+        <img src="assets/chem.jpg"/>
+    </ion-item>
+  </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+    <ion-card>
+      <ion-item [routerLink]="['/account']">
+        <img src="assets/acc.jpg"/>
+    </ion-item>
+  </ion-card>
+      </ion-slide>
+      
+  </ion-slides>
+  <ion-button color="dark" shape="round" [routerLink]="['/post']"><ion-icon name="add-outline"></ion-icon>Upload Blog</ion-button>
+</ion-content>

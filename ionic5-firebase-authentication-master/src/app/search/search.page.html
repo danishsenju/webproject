@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Search</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar mode="ios" animated placeholder="Seach for email..." debounce=1000 (ionChange)="search($event)"></ion-searchbar>
+
+  <!--search results -->
+  <ion-item lines="none" *ngFor="let user of searchedUsers">
+    <ion-avatar slot="start">
+      <img src="{{user.dp}}" />
+    </ion-avatar>
+    <ion-label>
+      <h2>
+        {{user.email}}
+      </h2>
+      <p>
+        @{{user.email}}
+      </p>
+    </ion-label>
+</ion-item>
+
+</ion-content>
